@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addTocart } from '../store/slices/cartslice';
 import { getProducts, filterquery, filterCategory } from '../store/slices/News.slice';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     const [search, setSearch] = useState("")
     const [categoty, setCategory] = useState([])
     const Products = useSelector(state => state.newsProducts)
+    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getProducts())
@@ -25,7 +27,13 @@ const Home = () => {
         dispatch(filterCategory(id))
     })
 
-
+    const addCart = (id) => {
+        const cart = {
+            id: id,
+            quantity: 1
+        }
+        dispatch(addTocart(cart))
+    }
     return (
         <section className="main">
             <label className='checkedFilter' htmlFor="filter">
@@ -83,7 +91,7 @@ const Home = () => {
                                 <h4 className="title-price">Price</h4>
                                 <div className="container-price-shop">
                                     <h3 className="text-price">${product.price}</h3>
-                                    <button className='btnShop'>
+                                    <button className='btnShop'  onClick={() => addCart(product.id)}>
                                         <i className="fa-solid fa-cart-shopping"></i>
                                     </button>
                                 </div>

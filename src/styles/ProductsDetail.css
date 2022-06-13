@@ -1,0 +1,92 @@
+.Products-detail{
+    width: 100%;
+    height: 100%;
+    padding-top: 8%;
+}
+
+.navegate{
+width: 100%;
+text-align: left;
+padding-left: 5%;
+}
+
+.navegate > a{
+    padding: 10px;
+    text-decoration: none;
+}
+
+.product-body{
+    width: 100%;
+    height:40% ;
+
+    display: flex;
+    justify-content: space-between;
+}
+.imgProduct{
+    width: 50%;
+    height: 100%;
+
+    padding: 3% 0% 0% 0%;
+}
+.imgProduct > .divImg{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 3%;
+}
+.divImg > img{
+    width: 60%;
+    height: 20%;
+}
+.imgProduct > .otherImg{
+    width: 100%;
+    height: 50%;
+}
+.otherImg > img{
+    width: 10%;
+    height: 50px;
+    margin: 0.5%;
+}
+.detailProduct{
+    width: 50%;
+    height: 50%;
+
+    text-align: left;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.detailProduct > h2{
+    width: 100%;
+
+    font-size: 20px;
+    text-align: left;
+}
+.detailProduct > p{
+    width: 100%;
+    font-size: 14px;
+    height: 50%;
+    text-align: left;
+}
+.detailProduct > h3, h6{
+    text-align: right;
+}
+
+.detailProduct > .increment, .decrement{
+    width: 5%;
+    height: 3%;
+}
+.detailProduct > input{
+    margin-left: 0%;
+    width: 6%;
+    text-align: center;
+}
+
+
+.some-category{
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+
+

@@ -32,11 +32,14 @@ const CartSidebar = ({ show, handleClose }) => {
 
                         {carts.products?.map((cart) => (
                             <ListGroup.Item as="li" key={cart.id} onClick={()=> selectProduct(cart.id)}>
-                                <h3>{cart?.brand}</h3>
-                                <button>X</button><br /><br />
+                                <h5>{cart?.brand}</h5>
                                 <h4>{cart.title}</h4>
+                                <br />
+                                <h6><span>Quantity:    </span>{cart.productsInCart.quantity} </h6>
+                                
+                                
                                 <br /><br />
-                                <h4>{cart.price}</h4>
+                                <h6>Preci:      {cart.price}</h6>
                                 
                         </ListGroup.Item>))}
 
